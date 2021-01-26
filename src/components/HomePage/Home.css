@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+
+.title{
+    background-color: white;
+    color: black;
+    font-family: 'Creepster', cursive;
+    font-size: 35px;
+    padding: 20px 65px;
+}
+
+.navbar{
+    padding: 0px 20px 0px 0px;
+}
+
+.top{
+    background-image: url('https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-left: 0;
+}
+
+
+
+.news-col{
+    padding: 0px 10px 0px 0px;
+}
+
+.medium-row1{
+    font-size: 40px;
+    line-height: 0.75em;
+    margin: 60px 20px;
+}
+
+.medium-row2{
+    margin: 60px 10px;
+}
+
+.center-image{
+    justify-content: center;
+    margin: 40px 10px;
+}
+
+.image-shape{
+    border-radius: 50%;
+}
+
+.bottom{
+    background: #232526; 
+background: -webkit-linear-gradient(to right, #414345, #232526);  
+background: linear-gradient(to right, #414345, #232526); 
+
+    color: white;
+    padding: 20px 5px;
+}
+
+.title-end{
+    
+    font-family: 'Original Surfer', cursive;
+    font-size: 32px;
+}
