@@ -25,11 +25,11 @@ function Home() {
                <Navbar bg="transparent" variant="light" className="navbar">
                    <Navbar.Brand className="title" href="#home">Team Technical Affairs</Navbar.Brand>
                    <Nav className="ml-auto nav-item">
-                     <Nav.Link href="#home">Administration</Nav.Link>
-                     <Nav.Link href="#features">Events</Nav.Link>
-                     <Nav.Link href="#pricing">Placements</Nav.Link>
-                     <Nav.Link href="#pricing">Blogs</Nav.Link>
-                     <Nav.Link href="#pricing">Contact</Nav.Link>
+                     <Nav.Link href="#administration">Administration</Nav.Link>
+                     <Nav.Link href="#events">Events</Nav.Link>
+                     <Nav.Link href="#placements">Placements</Nav.Link>
+                     <Nav.Link href="#blogs">Blogs</Nav.Link>
+                     <Nav.Link href="#contact">Contact</Nav.Link>
                    </Nav>    
                </Navbar>
                
