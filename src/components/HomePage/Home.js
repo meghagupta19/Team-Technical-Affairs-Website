@@ -1,15 +1,12 @@
 import React from 'react'
-import {Navbar,Nav} from 'react-bootstrap';
 import './Home.css';
 import News from './News'
-import Container from 'react-bootstrap/Container'
 import Events from './Events'
 import Events2 from './Events2' 
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
+import {Row,Col,Container,Figure,Navbar,Nav} from 'react-bootstrap'
 import News2 from './News2'
 import AboutUs from './AboutUs'
-import Figure from 'react-bootstrap/Figure'
+import {FaFacebook,FaLinkedin,FaTwitter,FaEnvelope} from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
 AOS.init({
@@ -22,15 +19,18 @@ function Home() {
     return (
         <div className="body">
             <div className="top">
-               <Navbar bg="transparent" variant="light" className="navbar">
+               <Navbar collapseOnSelect expand="lg" bg="transparent" variant="light" className="navbar">
                    <Navbar.Brand className="title" href="#home">Team Technical Affairs</Navbar.Brand>
+                   <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+                   <Navbar.Collapse id="responsive-navbar-nav">
                    <Nav className="ml-auto nav-item">
                      <Nav.Link href="#administration">Administration</Nav.Link>
                      <Nav.Link href="#events">Events</Nav.Link>
                      <Nav.Link href="#placements">Placements</Nav.Link>
                      <Nav.Link href="#blogs">Blogs</Nav.Link>
                      <Nav.Link href="#contact">Contact</Nav.Link>
-                   </Nav>    
+                   </Nav> 
+                   </Navbar.Collapse>   
                </Navbar>
                
                <Container fluid >
@@ -42,55 +42,57 @@ function Home() {
 
             </div>
             <div className="medium">
-               <Container fluid >
-                   <Row className="medium-row1" data-aos="zoom-in-up" data-aos-delay="200"><AboutUs/></Row>
+               <Container fluid className="medium-container">
+                   <Row className="medium-row1" data-aos="zoom-in-up" data-aos-delay="100"><AboutUs/></Row>
+                   <div id="events"></div>
                    <Row className="medium-row2" data-aos="zoom-in-up" data-aos-delay="100">
+                       
                        <Col md={5}><Events/></Col>                                              
                        <Col md={7}><Events2/></Col>
                    </Row>
-
-                   <h1>Administration</h1>
+                   <div id="administration"></div>
+                   <Row className="admin"><h1>Administration</h1></Row>
                    <hr></hr>
                    <Row className="center-image">
                     <Figure>
-                        <Figure.Image className="image-shape" width={171} height={180} alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
+                        <Figure.Image className="image-shape"  alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
                         <Figure.Caption>
-                         Dr. LK Awasthi<br/>Director
+                         Dr. LK Awasthi<br/><h3>Director</h3>
                         </Figure.Caption>
                     </Figure>
                    </Row>
                    <Row className="center-image">
                        <Col md={6}>
                            <Figure>
-                               <Figure.Image className="image-shape" width={171} height={180} alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
+                               <Figure.Image className="image-shape" alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
                                <Figure.Caption>
-                               Dr. Anish Sachdeva<br/>Dean Students Welfare
+                               Dr. Anish Sachdeva<br/><h3>Dean Students Welfare</h3>
                                 </Figure.Caption>
                            </Figure>
                        </Col>
                        <Col md={6}>
                             <Figure>
-                               <Figure.Image className="image-shape" width={171} height={180} alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
+                               <Figure.Image className="image-shape"  alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
                                <Figure.Caption>
-                               Dr. LK Awasthi<br/>Associate Dean Students Welfare
+                               Dr. LK Awasthi<br/><h3>Associate Dean Students Welfare</h3>
                                 </Figure.Caption>
                            </Figure>
                        </Col>
                    </Row>
-                   <Row className="center-image">
+                   <Row className="center-image" >
                        <Col md={6}>
                            <Figure>
-                               <Figure.Image className="image-shape" width={171} height={180} alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
+                               <Figure.Image className="image-shape" alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
                                <Figure.Caption>
-                               Dr. Anish Sachdeva<br/>Dean Students Welfare
+                               Dr. Anish Sachdeva<br/><h3>Associate Dean Students Welfare</h3>
                                 </Figure.Caption>
                            </Figure>
                        </Col>
                        <Col md={6}>
                             <Figure>
-                               <Figure.Image className="image-shape" width={171} height={180} alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
+                               <Figure.Image className="image-shape"  alt="171x180" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMGl0jtJ3dE4ABUUqHeqiLBzCkXDui91ZLlQ&usqp=CAU"/>
                                <Figure.Caption>
-                               Dr. LK Awasthi<br/>Associate Dean Students Welfare
+                               Dr. LK Awasthi<br/><h3>Associate Dean Students Welfare</h3>
                                 </Figure.Caption>
                            </Figure>
                        </Col>
@@ -103,12 +105,13 @@ function Home() {
                         <Col md={4}><div className="title-end">Team Technical Affairs</div></Col>
                         <Col md={4}>
                             <h4>Follow Us On</h4>
-                            <a href="https://www.facebook.com/"></a>
-                            <a href="https://www.linkedin.com/"></a>
-                            <a href="https://www.twitter.com/"></a>
-                            <a href="https://www.gmail.com/"></a>
+                            <a href="https://www.facebook.com/"><FaFacebook/></a>
+                            <a href="https://www.linkedin.com/"><FaLinkedin/></a>
+                            <a href="https://www.twitter.com/"><FaTwitter/></a>
+                            <a href="https://www.gmail.com/"><FaEnvelope/></a>
                         </Col>
                         <Col md={4}>
+                            <div id="contact"></div>
                             <h4>Contact Info</h4>
                             <p>OUR ADDRESS OFFICE (USA) P.O. Box 10641 Pleasanton Calfornia 9488 United State</p> 
                             <p>OFFICE (INDIA) Pheruman Road Amritsar -143112 Punjab (India)</p>                           
