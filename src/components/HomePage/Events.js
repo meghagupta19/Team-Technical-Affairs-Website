@@ -5,8 +5,8 @@ import "./Events.css";
 function Events() {
   return (
     <div>
-      <Carousel className="Events-content" >
-        <Carousel.Item className="Events-item">
+      <Carousel className="Events-content" pause="false">
+        <Carousel.Item className="Events-item" interval={1000}>
           <img
             className="d-block w-100"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbEGQ9o9-hBjxoJml7L4nDEXgrXG_rAipqA&usqp=CAU"
@@ -29,12 +29,12 @@ function Events() {
               comprehensible Latin anymore. While lorem ipsum's still resembles
               classical Latin, it actually has no meaning whatsoever.
             </p>
-            <Button href="#"size="lg" active>
+            <Button variant="info" href="#"size="lg" active>
               Website
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className="Events-item">
+        <Carousel.Item className="Events-item"interval={500}>
           <img
             className="d-block w-100"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbEGQ9o9-hBjxoJml7L4nDEXgrXG_rAipqA&usqp=CAU"
@@ -58,12 +58,12 @@ function Events() {
               comprehensible Latin anymore. While lorem ipsum's still resembles
               classical Latin, it actually has no meaning whatsoever.
             </p>
-            <Button  href="#" size="lg" active>
+            <Button variant="info" href="#" size="lg" active>
               Website
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className="Events-item">
+        <Carousel.Item className="Events-item" interval={500}>
           <img
             className="d-block w-100"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbEGQ9o9-hBjxoJml7L4nDEXgrXG_rAipqA&usqp=CAU"
@@ -87,7 +87,7 @@ function Events() {
               comprehensible Latin anymore. While lorem ipsum's still resembles
               classical Latin, it actually has no meaning whatsoever.
             </p>
-            <Button  size="lg" active href="#">
+            <Button variant="info" size="lg" active href="#">
               Website
             </Button>
           </Carousel.Caption>
