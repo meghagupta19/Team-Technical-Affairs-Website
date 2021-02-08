@@ -6,6 +6,7 @@ import Events2 from './Events2'
 import {Row,Col,Container,Figure,Navbar,Nav} from 'react-bootstrap'
 import News2 from './News2'
 import AboutUs from './AboutUs'
+import Team from './Team'
 import {FaFacebook,FaLinkedin,FaTwitter,FaEnvelope} from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -27,7 +28,7 @@ function Home() {
                      <Nav.Link href="#administration">Administration</Nav.Link>
                      <Nav.Link href="#events">Events</Nav.Link>
                      <Nav.Link href="#placements">Placements</Nav.Link>
-                     <Nav.Link href="#blogs">Blogs</Nav.Link>
+                     <Nav.Link href="#tech-team">Tech Team</Nav.Link>
                      <Nav.Link href="#contact">Contact</Nav.Link>
                    </Nav> 
                    </Navbar.Collapse>   
@@ -50,6 +51,9 @@ function Home() {
                        <Col md={5}><Events/></Col>                                              
                        <Col md={7}><Events2/></Col>
                    </Row>
+                   <div id="tech-team"></div>
+                   <Row className="tech-team"><h1>Tech Team</h1></Row>
+                   <Row><Team/></Row>
                    <div id="administration"></div>
                    <Row className="admin"><h1>Administration</h1></Row>
                    <hr></hr>
