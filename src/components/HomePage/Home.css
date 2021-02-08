@@ -112,3 +112,30 @@ a:hover {
   font-family: "Original Surfer", cursive;
   font-size: 32px;
 }
+
+
+/*Team*/
+.team{
+  text-align: left;
+  margin: 30px 60px;
+  padding: 20px;
+}
+
+.team2{
+  margin: 30px 50px 0px 50px;
+}
+
+.team1>.card-deck>.card , .team2>.card-deck>.card{
+   background-color: rgb(1, 126, 126);
+   color: white;
+}
+.team1>.card-deck>.card>.card-body>.card-title , .team2>.card-deck>.card>.card-body>.card-title{
+  font-size: 30px;
+}
+
+.tech-team{
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
