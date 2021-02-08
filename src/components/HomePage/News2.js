@@ -5,7 +5,7 @@ import './News.css'
 function News2() {
     return (
         <div className="news2">
-            <Carousel>
+            <Carousel pause="false">
                 <Carousel.Item interval={1000} className="news-item" > 
                 <img className="d-block w-100"src="https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
                   alt="First slide"/>
