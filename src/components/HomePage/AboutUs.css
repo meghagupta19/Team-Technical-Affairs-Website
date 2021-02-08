@@ -11,16 +11,16 @@
     padding: 8px 20px;
   }
 
-  .card-body{
+  .about>.card-body{
     padding-bottom:0px;
   }
 
-  .card-text>hr{
+  .about>.card-body>.card-text>hr{
     background-color: black;
     height: 3px;
   }
 
-  .card-text{
+  .about>.card-body>.card-text{
     padding: 0px 20px;
     line-height: 30px;
     font-size: 17px;
