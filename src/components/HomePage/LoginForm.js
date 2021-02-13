@@ -15,7 +15,7 @@ function LoginForm() {
   };
 
   return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit} action="/register" method="post">
+    <Form noValidate validated={validated} onSubmit={handleSubmit} action="/login" method="post">
       <Form.Row>
         <Form.Group as={Col} md="8" controlId="validationCustom03">
           <Form.Label>Institute email address</Form.Label>
@@ -37,6 +37,7 @@ function LoginForm() {
       
       <Button type="submit" onClick={handleSubmit}>Login</Button>
     </Form>
+    
     
   );
 }
