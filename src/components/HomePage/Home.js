@@ -7,6 +7,7 @@ import {Row,Col,Container,Figure,Navbar,Nav} from 'react-bootstrap'
 import News2 from './News2'
 import AboutUs from './AboutUs'
 import Team from './Team'
+import Login from './login'
 import {FaFacebook,FaLinkedin,FaTwitter,FaEnvelope} from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -30,6 +31,7 @@ function Home() {
                      <Nav.Link href="#placements">Placements</Nav.Link>
                      <Nav.Link href="#tech-team">Tech Team</Nav.Link>
                      <Nav.Link href="#contact">Contact</Nav.Link>
+                     <Nav.Link><Login/></Nav.Link>
                    </Nav> 
                    </Navbar.Collapse>   
                </Navbar>
