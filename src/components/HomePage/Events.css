@@ -1,0 +1,55 @@
+.Events-item>.carousel-caption>.card-head {
+  font-family: "Times New Roman", Times, serif;
+  text-align: start;
+  font-size: 50px;
+  font-weight: 550;
+  padding: 0px 20px;
+  color: black;
+  margin-bottom: 0;
+}
+
+.Events-item{
+  height: 600px;
+}
+
+.Events-item>img{
+  height: 600px;
+
+}
+
+.Events-item>.carousel-caption>hr {
+  background-color: black;
+  height: 3px;
+  margin: 10px 0px;
+}
+.Events-item>.carousel-caption {
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0px 20px 0px 30px;
+  text-align: left;
+  color: black;
+  height: 500px;
+}
+
+.Events-item>.carousel-caption>a{
+  background-color: teal;
+  color: white;
+  border-radius: 40%;
+  padding: 10px 30px;  
+}
+
+
+.Events-content>.carousel-control-next {
+  top: 460px;
+  left: 70px;
+}
+.Events-content>.carousel-control-prev {
+  top: 460px;
+  left: 0;
+}
+
+.Events-content > .carousel-indicators {
+  opacity: 0;
+}
+

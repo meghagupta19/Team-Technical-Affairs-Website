@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap");
+
+
+
+.title {
+  background-color: white;
+  color: black;
+  font-family: "Creepster", cursive;
+  font-size: 35px;
+  padding: 20px 65px;
+}
+
+.navbar {
+  padding: 0px 20px 0px 0px;
+}
+
+.navbar-brand {
+  margin: 0px;
+}
+
+.top {
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 0;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+.news-col {
+  padding: 0px 5px 0px 0px;
+}
+
+.medium-row1 {
+  margin: 60px 0px;
+}
+
+.medium-row2 {
+  margin: 60px 0px;
+}
+
+.medium-row2 > .col-md-5,
+.medium-row2 > .col-md-7 {
+  padding: 0;
+}
+
+.admin {
+  text-align: start;
+  padding-left: 10px;
+  margin-bottom: -20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.admin > h1 {
+  font-size: 50px;
+}
+
+.medium-container > hr {
+  background-color: teal;
+  margin-right: 0;
+  width: 80%;
+  height: 3px;
+  border-radius: 20%;
+}
+
+.center-image {
+  justify-content: center;
+  margin: 60px 10px;
+}
+
+.figure-caption {
+  font-weight: 700;
+  font-size: 30px;
+  color: black;
+  padding: 0px;
+}
+
+.figure-caption > h3 {
+  font-size: 20px;
+}
+
+.image-shape {
+  border-radius: 50%;
+}
+
+.bottom {
+  margin-top: 200px;
+  background: #232526;
+  background: -webkit-linear-gradient(to right, #414345, #232526);
+  background: linear-gradient(to right, #414345, #232526);
+  color: white;
+  padding: 40px 5px;
+}
+
+a {
+  color: teal;
+  margin: 5px;
+  font-size: 25px;
+}
+
+a:hover {
+  color: teal;
+}
+
+.title-end {
+  font-family: "Original Surfer", cursive;
+  font-size: 32px;
+}
+
+
+/*Team*/
+.team{
+  text-align: left;
+  margin: 30px 60px;
+  padding: 20px;
+}
+
+.team2{
+  margin: 30px 50px 0px 50px;
+}
+
+.team1>.card-deck>.card , .team2>.card-deck>.card{
+   background-color: rgb(1, 126, 126);
+   color: white;
+}
+.team1>.card-deck>.card>.card-body>.card-title , .team2>.card-deck>.card>.card-body>.card-title{
+  font-size: 30px;
+}
+
+.tech-team{
+  margin: 0;
+  text-align: center;
+  align-items: center;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
