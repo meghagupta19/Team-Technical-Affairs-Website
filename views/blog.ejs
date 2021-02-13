@@ -11,8 +11,8 @@
     <% blogs.forEach(function(blog){ %>
         <h3><%= blog.username %></h3>
         <p class="secret-text"><%= blog.exp %></p>
-        <form action="/blog" method="/post">
-            <button type="submit">Delete</button>
+        <form action="/delete" method="post">
+            <button type="submit" name="deletedBlog" value=<%= blog.username %> onClick="this.form.submit()">Delete</button>
         </form>
     <% }) %>
    
