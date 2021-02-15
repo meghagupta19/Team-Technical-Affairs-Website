@@ -37,7 +37,20 @@ body {
   overflow-x: hidden;
 }
 
+.dropdown-item{
+  color: white;
+  font-size: 16px;
+}
+.dropdown-item:active,.dropdown-item:hover{
+  background-color: transparent;
+  color: aliceblue;
+  font-size: 20px;
+  text-decoration: solid;
+}
 
+.dropdown-menu{
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
+}
 
 .news-col {
   padding: 0px 5px 0px 0px;
