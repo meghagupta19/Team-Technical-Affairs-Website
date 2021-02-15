@@ -1,6 +1,9 @@
 .about{ 
     /*background-image: url('https://images.pexels.com/photos/2539924/pexels-photo-2539924.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500');*/
-    background-color: rgb(2, 177, 177);   
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbEGQ9o9-hBjxoJml7L4nDEXgrXG_rAipqA&usqp=CAU');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
   }
 
   .card-head{
