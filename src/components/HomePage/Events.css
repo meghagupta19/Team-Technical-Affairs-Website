@@ -76,3 +76,33 @@
   width: 10px;
 }
 
+.Events-content2 > .carousel-indicators{
+  top: 250px;
+}
+
+@media(max-width:768px)
+{
+  .Events-content2 > .carousel-indicators{
+    top: 170px;
+  }
+}
+
+@media(max-width:992px)
+{
+  .Events-content2 > .carousel-indicators{
+     top: 150px;
+  }
+}
+
+@media(max-width:576px)
+{
+  .Events-content2 > .carousel-indicators{
+     top: 120px;
+  }
+}
+@media(max-width:1220px)
+{
+  .Events-content2 > .carousel-indicators{
+     top: 170px;
+  }
+}
