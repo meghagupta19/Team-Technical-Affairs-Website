@@ -8,6 +8,7 @@ import News2 from './News2'
 import AboutUs from './AboutUs'
 import Team from './Team'
 import Login from './login'
+import { Link,BrowserRouter } from 'react-router-dom';
 import {FaFacebook,FaLinkedin,FaTwitter,FaEnvelope} from 'react-icons/fa';
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -28,7 +29,7 @@ function Home() {
                    <Nav className="ml-auto nav-item">
                      <Nav.Link href="#administration">Administration</Nav.Link>
                      <Nav.Link href="#events">Events</Nav.Link>
-                     <Nav.Link href="#placements">Placements</Nav.Link>
+                     <Nav.Link><BrowserRouter><Link to="/">Placements</Link></BrowserRouter></Nav.Link>
                      <Nav.Link href="#tech-team">Tech Team</Nav.Link>
                      <Nav.Link href="#contact">Contact</Nav.Link>
                      <Nav.Link><Login/></Nav.Link>
