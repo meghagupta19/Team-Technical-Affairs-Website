@@ -39,7 +39,7 @@ function Home() {
               <Nav.Link href="#events">Events</Nav.Link>
               <Nav.Link>
                 <BrowserRouter>
-                  <Link to="/">Placements</Link>
+                  <Link to="/" className="placed-blog">Placements</Link>
                 </BrowserRouter>
               </Nav.Link>
               <Nav.Link href="#tech-team">Tech Team</Nav.Link>
