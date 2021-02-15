@@ -10,12 +10,11 @@ function LoginForm() {
       event.preventDefault();
       event.stopPropagation();
     }
-
     setValidated(true);
   };
 
   return (
-    <Form noValidate validated={validated} onSubmit={handleSubmit} action="/login" method="post">
+    <Form noValidate validated={validated} onSubmit="{e => { e.preventDefault(); }}" action="/login" method="post">
       <Form.Row>
         <Form.Group as={Col} md="8" controlId="validationCustom03">
           <Form.Label>Institute email address</Form.Label>
@@ -35,7 +34,7 @@ function LoginForm() {
         </Form.Group>
       </Form.Row>
       
-      <Button type="submit" onClick={handleSubmit}>Login</Button>
+      <Button type="submit" onClick={handleSubmit} >Login</Button>
     </Form>
     
     
