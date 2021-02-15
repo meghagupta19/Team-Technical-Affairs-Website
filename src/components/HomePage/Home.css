@@ -60,6 +60,12 @@ body {
   background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
 }
 
+@media(max-width:576px)
+  {
+   .navbar-brand{
+      width: 400px;
+   }
+  }
 .news-col {
   padding: 0px 5px 0px 0px;
 }
@@ -125,7 +131,7 @@ body {
   background: -webkit-linear-gradient(to right, #414345, #232526);
   background: linear-gradient(to right, #414345, #232526);
   color: white;
-  padding: 40px 5px;
+  padding: 20px 5px;
 }
 
 a {
@@ -156,7 +162,10 @@ a:hover {
 }
 
 .team1>.card-deck>.card , .team2>.card-deck>.card{
-   background-color: rgb(1, 126, 126);
+   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREG1BQ62NTMvgSBXPx5QSAAlOXVKYcwkjWgg&usqp=CAU');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
    color: white;
 }
 .team1>.card-deck>.card>.card-body>.card-title , .team2>.card-deck>.card>.card-body>.card-title{
@@ -166,6 +175,9 @@ a:hover {
 .tech-team{
   margin: 0;
   text-align: center;
-  align-items: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.tech-team>h1{
+  margin: auto;
 }
