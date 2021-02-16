@@ -9,6 +9,14 @@
   padding: 20px 65px;
 }
 
+.body2{
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-left: 0;
+}
+
 .navbar {
   padding: 0px 20px 0px 0px;
 }
@@ -25,18 +33,21 @@
   padding-left: 0;
 }
 
-.nav-link>a,.nav-link,.placed-blog{
+.nav-link > a,
+.nav-link,
+.placed-blog,
+.dropdown-toggle {
   font-size: 19px;
   padding: 0;
   margin: 0;
   font-weight: 500;
   color: #414345;
 }
-.placed-blog:hover,.nav-link>a:hover{
+.placed-blog:hover,
+.nav-link > a:hover {
   color: black;
   text-decoration: none;
 }
-
 
 body {
   padding: 0;
@@ -44,27 +55,27 @@ body {
   overflow-x: hidden;
 }
 
-.dropdown-item{
+.dropdown-item {
   color: white;
   font-size: 16px;
 }
-.dropdown-item:active,.dropdown-item:hover{
+.dropdown-item:active,
+.dropdown-item:hover {
   background-color: transparent;
   color: aliceblue;
   font-size: 20px;
   text-decoration: solid;
 }
 
-.dropdown-menu{
+.dropdown-menu {
   background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
 }
 
-@media(max-width:576px)
-  {
-   .navbar-brand{
-      width: 400px;
-   }
+@media (max-width: 576px) {
+  .navbar-brand {
+    width: 400px;
   }
+}
 .news-col {
   padding: 0px 5px 0px 0px;
 }
@@ -81,7 +92,7 @@ body {
   padding: 0;
 }
 
-.medium-row2 > .col-md-7{
+.medium-row2 > .col-md-7 {
   padding: 100px 0px;
 }
 
@@ -131,6 +142,7 @@ body {
   background: linear-gradient(to right, #414345, #232526);
   color: white;
   padding: 20px 5px;
+  text-align: center;
 }
 
 a {
@@ -148,35 +160,36 @@ a:hover {
   font-size: 32px;
 }
 
-
 /*Team*/
-.team{
+.team {
   text-align: left;
   margin: 30px 60px;
   padding: 20px;
 }
 
-.team2{
+.team2 {
   margin: 30px 50px 0px 50px;
 }
 
-.team1>.card-deck>.card , .team2>.card-deck>.card{
-   background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREG1BQ62NTMvgSBXPx5QSAAlOXVKYcwkjWgg&usqp=CAU');
-   background-repeat: no-repeat;
-   background-position: center;
-   background-size: cover;
-   color: white;
+.team1 > .card-deck > .card,
+.team2 > .card-deck > .card {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREG1BQ62NTMvgSBXPx5QSAAlOXVKYcwkjWgg&usqp=CAU");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
-.team1>.card-deck>.card>.card-body>.card-title , .team2>.card-deck>.card>.card-body>.card-title{
+.team1 > .card-deck > .card > .card-body > .card-title,
+.team2 > .card-deck > .card > .card-body > .card-title {
   font-size: 30px;
 }
 
-.tech-team{
+.tech-team {
   margin: 0;
   text-align: center;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
-.tech-team>h1{
+.tech-team > h1 {
   margin: auto;
 }
