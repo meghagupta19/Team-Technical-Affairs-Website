@@ -1,29 +1,12 @@
 import React from "react";
-import { Navbar, Nav,NavDropdown, Row, Col, Container } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Login from "./login";
-import Home from "./Home";
-import {
-  Link,
-  BrowserRouter,
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import { FaFacebook, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-
-import ReactDOM from "react-dom";
-ReactDOM.render(
-  <Router>
-    <Switch>
-      <Route exact path="/home" component={Home} />
-    </Switch>
-  </Router>,
-  document.getElementById("root")
-);
+import { Link } from "react-router-dom";
+import Contact from "./Contact";
 function Blogs() {
   return (
-      <div className="body">
-        <div className="top">
+    <div className="body2">
+      <div className="top2">
         <Navbar
           collapseOnSelect
           expand="lg"
@@ -37,16 +20,12 @@ function Blogs() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto nav-item">
-              
-              
               <Nav.Link>
-                <BrowserRouter>
-                  <Link to="/home" className="placed-blog">
-                    Home
-                  </Link>
-                </BrowserRouter>
+                <Link to="/home" className="placed-blog">
+                  Home
+                </Link>
               </Nav.Link>
-              
+
               <NavDropdown title="Societies" id="basic-nav-dropdown">
                 <NavDropdown.Item href="https://www.nitj.ac.in/mechanical/teams/some_society.html">
                   Some
@@ -78,7 +57,7 @@ function Blogs() {
                   href="/"
                   onClick={(e) => {
                     let hero = document.getElementById("contact");
-                    e.preventDefault(); 
+                    e.preventDefault();
                     hero && hero.scrollIntoView({ behavior: "smooth" });
                   }}
                 >
@@ -91,44 +70,18 @@ function Blogs() {
             </Nav>
           </Navbar.Collapse>
         </Navbar>
-
-        </div>
-        <div className="bottom">
-          <Container>
-            <Row>
-              <Col md={4}>
-                <div className="title-end">Team Technical Affairs</div>
-              </Col>
-              <Col md={4}>
-                <h4>Follow Us On</h4>
-                <a href="https://www.facebook.com/">
-                  <FaFacebook />
-                </a>
-                <a href="https://www.linkedin.com/">
-                  <FaLinkedin />
-                </a>
-                <a href="https://www.twitter.com/">
-                  <FaTwitter />
-                </a>
-                <a href="https://www.gmail.com/">
-                  <FaEnvelope />
-                </a>
-              </Col>
-              <Col md={4}>
-                <div id="contact"></div>
-                <h4>Contact Info</h4>
-                <p>
-                  OUR ADDRESS OFFICE (USA) P.O. Box 10641 Pleasanton Calfornia
-                  9488 United State
-                </p>
-                <p>
-                  OFFICE (INDIA) Pheruman Road Amritsar -143112 Punjab (India)
-                </p>
-              </Col>
-            </Row>
-          </Container>
-        </div>
       </div>
+      <div className="placements">
+        <form action="/blog" method="post">
+          <input type="email" name="username" />
+          <textarea name="exp" rows="5" columns="15"></textarea>
+          <button type="submit">Add</button>
+        </form>
+      </div>
+      <div className="bottom">
+        <Contact />
+      </div>
+    </div>
   );
 }
 
