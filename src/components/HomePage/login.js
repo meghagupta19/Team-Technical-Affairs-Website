@@ -1,8 +1,8 @@
 import React from "react";
-import { Modal,Button } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 import { useState } from "react";
 import Register from "./Register";
-import LoginForm from "./LoginForm"
+import LoginForm from "./LoginForm";
 function Login() {
   const [show, setShow] = useState(false);
 
@@ -18,7 +18,7 @@ function Login() {
           <Modal.Title>Login Now</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <LoginForm/>
+          <LoginForm />
         </Modal.Body>
         <Modal.Footer>
           New User?
