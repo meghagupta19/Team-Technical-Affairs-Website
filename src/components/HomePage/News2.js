@@ -1,46 +1,54 @@
-import React from 'react'
-import Carousel from 'react-bootstrap/Carousel'
-import './News.css'
+import React from "react";
+import Carousel from "react-bootstrap/Carousel";
+import "./News.css";
 
 function News2() {
-    return (
-        <div className="news2">
-            <Carousel pause="false" className="news-carousel">
-                <Carousel.Item interval={1000} className="news-item" > 
-                <img className="d-block w-100"src="https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" 
-                  alt="First slide"/>
-                    <Carousel.Caption>
-                     <h5>First slide label</h5>
-                     
-                    </Carousel.Caption>
-               </Carousel.Item>
-               <Carousel.Item interval={500} className="news-item"> 
-               <img className="d-block w-100"src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  alt="First slide"/>                  
-                    <Carousel.Caption>
-                      <h5>Second slide label</h5>
-                      
-                    </Carousel.Caption>
-               </Carousel.Item>
-               <Carousel.Item interval={500} className="news-item">    
-               <img className="d-block w-100"src="https://images.pexels.com/photos/1238966/pexels-photo-1238966.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  alt="First slide"/>               
-                    <Carousel.Caption>
-                      <h5>Third slide label</h5>
-                      
-                    </Carousel.Caption>
-               </Carousel.Item>
-               <Carousel.Item interval={1000} className="news-item"> 
-               <img className="d-block w-100"src="https://images.pexels.com/photos/1708936/pexels-photo-1708936.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                  alt="First slide"/>                  
-                   <Carousel.Caption>
-                     <h5>Fourth slide label</h5>
-                     
-                   </Carousel.Caption>
-               </Carousel.Item>
-            </Carousel>
-        </div>
-    )
+  return (
+    <div className="news2">
+      <Carousel pause="false" className="news-carousel">
+        <Carousel.Item interval={1000} className="news-item">
+          <img
+            className="d-block w-100"
+            src="https://images.pexels.com/photos/1157557/pexels-photo-1157557.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h5>First slide label</h5>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={500} className="news-item">
+          <img
+            className="d-block w-100"
+            src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h5>Second slide label</h5>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={500} className="news-item">
+          <img
+            className="d-block w-100"
+            src="https://images.pexels.com/photos/1238966/pexels-photo-1238966.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h5>Third slide label</h5>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item interval={1000} className="news-item">
+          <img
+            className="d-block w-100"
+            src="https://images.pexels.com/photos/1708936/pexels-photo-1708936.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h5>Fourth slide label</h5>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </div>
+  );
 }
 
-export default News2
+export default News2;
