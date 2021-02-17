@@ -17,7 +17,8 @@ function Team() {
               </Card.Text>
               <Button
                 variant="info"
-                href="https://www.nitj.ac.in/mechanical/teams/avishkar.html">
+                href="https://www.nitj.ac.in/mechanical/teams/avishkar.html"
+              >
                 Visit Website
               </Button>
             </Card.Body>
@@ -39,7 +40,8 @@ function Team() {
               </Card.Text>
               <Button
                 variant="info"
-                href="https://www.nitj.ac.in/mechanical/teams/daksh.html">
+                href="https://www.nitj.ac.in/mechanical/teams/daksh.html"
+              >
                 Visit Website
               </Button>
             </Card.Body>
