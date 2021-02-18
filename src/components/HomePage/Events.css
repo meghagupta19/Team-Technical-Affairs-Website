@@ -1,4 +1,4 @@
-.Events-item>.carousel-caption>.card-head {
+.Events-item > .carousel-caption > .card-head {
   font-family: "Times New Roman", Times, serif;
   text-align: start;
   font-size: 50px;
@@ -8,21 +8,20 @@
   margin-bottom: 0;
 }
 
-.Events-item{
+.Events-item {
   height: 600px;
 }
 
-.Events-item>img{
+.Events-item > img {
   height: 600px;
-
 }
 
-.Events-item>.carousel-caption>hr {
+.Events-item > .carousel-caption > hr {
   background-color: black;
   height: 3px;
   margin: 10px 0px;
 }
-.Events-item>.carousel-caption {
+.Events-item > .carousel-caption {
   top: 0;
   left: 0;
   right: 0;
@@ -32,19 +31,18 @@
   height: 500px;
 }
 
-.Events-item>.carousel-caption>a{
+.Events-item > .carousel-caption > a {
   background-color: teal;
   color: white;
   border-radius: 40%;
-  padding: 10px 30px;  
+  padding: 10px 30px;
 }
 
-
-.Events-content>.carousel-control-next {
+.Events-content > .carousel-control-next {
   top: 460px;
   left: 70px;
 }
-.Events-content>.carousel-control-prev {
+.Events-content > .carousel-control-prev {
   top: 460px;
   left: 0;
 }
@@ -53,56 +51,53 @@
   opacity: 0;
 }
 
-.Events-item2-img{
+.Events-item2-img {
   display: flex;
-  flex-direction: row;  
+  flex-direction: row;
 }
 
-.Events-item2-img>img{
+.Events-item2-img > img {
   width: 20%;
 }
 
-.Events-item2-img>.img2{
+.Events-item2-img > .img2 {
   width: 45%;
 }
 
-.Events-content2>.carousel-control-next, .Events-content2>.carousel-control-prev{
+.Events-content2 > .carousel-control-next,
+.Events-content2 > .carousel-control-prev {
   opacity: 0;
 }
 
-.Events-content2 > .carousel-indicators li{
+.Events-content2 > .carousel-indicators li {
   border-radius: 100%;
   height: 10px;
   width: 10px;
 }
 
-.Events-content2 > .carousel-indicators{
+.Events-content2 > .carousel-indicators {
   top: 250px;
 }
 
-@media(max-width:768px)
-{
-  .Events-content2 > .carousel-indicators{
+@media (max-width: 768px) {
+  .Events-content2 > .carousel-indicators {
     top: 170px;
   }
 }
 
-@media(max-width:992px)
-{
-  .Events-content2 > .carousel-indicators{
-     top: 150px;
+@media (max-width: 992px) {
+  .Events-content2 > .carousel-indicators {
+    top: 150px;
   }
 }
 
-@media(max-width:576px)
-{
-  .Events-content2 > .carousel-indicators{
-     top: 120px;
+@media (max-width: 576px) {
+  .Events-content2 > .carousel-indicators {
+    top: 120px;
   }
 }
-@media(max-width:1220px)
-{
-  .Events-content2 > .carousel-indicators{
-     top: 170px;
+@media (max-width: 1220px) {
+  .Events-content2 > .carousel-indicators {
+    top: 170px;
   }
 }
