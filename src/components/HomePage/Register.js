@@ -1,7 +1,7 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
 import { useState } from "react";
-import RegisterForm from "./RegisterForm"
+import RegisterForm from "./RegisterForm";
 function Register() {
   const [show, setShow] = useState(false);
 
@@ -17,10 +17,10 @@ function Register() {
           <Modal.Title>Register Yourself</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <RegisterForm/>
+          <RegisterForm />
         </Modal.Body>
         <Modal.Footer>
-            Already Registered?
+          Already Registered?
           <Button variant="secondary" onClick={handleClose}>
             Login
           </Button>
