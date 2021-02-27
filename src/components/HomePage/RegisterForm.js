@@ -1,13 +1,11 @@
-import React, {useEffect,useState} from "react";
+import React, {useState} from "react";
 import { Form, Col, Button } from "react-bootstrap";
 
 import axios from 'axios';
 function FormExample(props) {
   const [validated, setValidated] = useState(false);
-  const [toggleDisplay] = useState('none');
-    const openModal = () => {
-        toggleDisplay('block');     
-    }
+  
+    
   const [state , setState] = useState({
     name:"",
     rollno:"",
@@ -24,7 +22,7 @@ function FormExample(props) {
 
     setValidated(true);
     sendDetailsToServer();
-    closeModal();
+    
   };
 
    const handleChange = (e) => {
@@ -35,17 +33,8 @@ function FormExample(props) {
         }))
         
     }
-    const closeModal = () => {
-      toggleDisplay('none'); 
-      
-  }
-  useEffect(() => {
-      if(props.errorMessage !== null) {
-          openModal()
-      } else {
-          closeModal()
-      }
-  });
+    
+  
 
 
     const sendDetailsToServer = () => {
