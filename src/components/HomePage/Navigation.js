@@ -1,8 +1,29 @@
 import React from "react";
 import Login from "./login";
-import { Link } from "react-router-dom";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Link,Redirect } from "react-router-dom";
+import { useState } from "react";
+import { Navbar, Nav, NavItem,NavDropdown } from "react-bootstrap";
+import { isAuthenticated,signout } from "../../auth/authHelper"
 function Navigation() {
+  const [loginSuccess,setLogin] = useState(false)
+  const loginDetails = ()=>{
+   if (isAuthenticated()){
+     return <div><NavItem>
+       Welcome {localStorage.getItem("name")}!
+     </NavItem>
+     <Nav.Link onClick ={()=>{
+       signout()
+        setLogin(true)
+     }}>
+       Logout
+     </Nav.Link>
+     </div>
+   }
+   else 
+   return <Nav.Link>
+   <Login />
+ </Nav.Link>
+  }
   return (
     <div>
       <Navbar //Navigation Bar
@@ -93,9 +114,7 @@ function Navigation() {
                 Contact
               </a>
             </Nav.Link>
-            <Nav.Link>
-              <Login />
-            </Nav.Link>
+            {loginDetails()}
           </Nav>
         </Navbar.Collapse>
       </Navbar>

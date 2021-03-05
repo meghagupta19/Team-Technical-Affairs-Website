@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import PrivateRoute from "./auth/privateRoute"
 import Blogs from "./components/HomePage/Blogs";
 import reportWebVitals from "./reportWebVitals";
 
@@ -11,7 +12,7 @@ ReactDOM.render(
   <BrowserRouter>
     <Switch>
       <Route exact path="/home" component={App} />
-      <Route path="/blogs" component={Blogs} />
+      <PrivateRoute path="/blogs" component={Blogs} />
     </Switch>
   </BrowserRouter>,
   rootElement

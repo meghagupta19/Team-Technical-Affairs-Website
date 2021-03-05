@@ -18,7 +18,7 @@ function Login() {
           <Modal.Title>Login Now</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <LoginForm />
+          <LoginForm close= {handleClose}/>
         </Modal.Body>
         <Modal.Footer>
           New User?

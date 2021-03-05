@@ -1,9 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar, Nav, NavDropdown } from "react-bootstrap";
 import Login from "./login";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
+import axios from "axios"
+import {API_URL} from "../../config"
+
 function Blogs() {
+  
+  const [state, setState] = useState({
+    "username": "",
+    "exp":""
+  })
+  function handleOnChange(e){
+    const {name,value} = e.target
+    setState({...state, [name]:value})
+    
+  }
+  function handleOnSubmit(e){
+    e.preventDefault();
+    const data ={
+      "username": state.username,
+      "exp": state.exp
+    }
+    const access_token = localStorage.getItem("jwt")
+   
+   axios.post(API_URL+"blog",data,{ headers: {"Authorization" : "Bearer "+ access_token}}).then((res)=>{
+      console.log("response recorded");
+    }).catch((err)=>{
+      console.log(data)
+      console.log(err)
+    })
+    setState({
+      "username": "",
+    "exp":""
+    })
+  }
   return (
     <div className="body2">
       <div className="top2">
@@ -72,10 +104,10 @@ function Blogs() {
         </Navbar>
       </div>
       <div className="placements">
-        <form action="/blog" method="post">
-          <input type="email" name="username" />
-          <textarea name="exp" rows="5" columns="15"></textarea>
-          <button type="submit">Add</button>
+        <form >
+          <input type="email" name="username" onChange={handleOnChange} value={state.username}/>
+          <textarea name="exp" rows="5" columns="15"  onChange={handleOnChange} value={state.exp} ></textarea>
+          <button type="submit" onClick={handleOnSubmit}>Add</button>
         </form>
       </div>
       <div className="bottom">

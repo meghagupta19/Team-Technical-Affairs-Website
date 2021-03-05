@@ -1,18 +1,22 @@
 import React, {useState} from "react";
-import { Form, Col, Button } from "react-bootstrap";
-
-import axios from 'axios';
+import { Form, Col, Button,Alert } from "react-bootstrap";
+import config from "../../config"
+import axios from 'axios'
+import { Redirect } from 'react-router-dom';
+import { signin, authenticate, isAuthenticated } from "../../auth/authHelper"
 function FormExample(props) {
+  const api_url = config.API_URL
   const [validated, setValidated] = useState(false);
   
-    
-  const [state , setState] = useState({
+  const initialData ={
     name:"",
     rollno:"",
     email : "",
     password : "",
-    contact:""
-})
+    contact:"",
+    Success: true
+}
+  const [state , setState] = useState(initialData)
   const handleSubmit = (event) => {
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
@@ -41,40 +45,37 @@ function FormExample(props) {
       if(state.email.length && state.password.length) {
           
           const payload={
-            "name":state.name,
-            "rollNmuber":state.rollno,
-              "email":state.email,
+            "username":state.email,
+            "roll":state.rollno,
+              "name":state.username,
               "password":state.password,
               "contact":state.contact
           }
-          axios.post("http://localhost:3000/home", payload)
+          axios.post(api_url + "user/register", payload)
               .then(function (response) {
-                  if(response.status === 200){
-                      setState(prevState => ({
-                          ...prevState,
-                          'successMessage' : 'Registration successful. Redirecting to home page..'
-                      }))
-                      
-                      redirectToHome();
-                      props.showError(null)
-                  } else{
-                      props.showError("Some error ocurred");
-                  }
+                  console.log("register success")
+                  redirectToHome()
               })
               .catch(function (error) {
-                  console.log(error);
+                  setState({...state, Success:false})
+                  console.log(error)
               });    
       } else {
-          props.showError('Please enter valid details')    
+        setState({...state, Success:false})
+        
       }
       
   }
 
   const redirectToHome = () => {
-    props.updateTitle('Home')
-    props.history.push('/home');
+    props.close()
+    return <Redirect to='/home' />
 }
-
+const errorMsg = ()=>{
+  if (state.Success)
+  return <div></div>;
+  return <Alert variant = "danger">Register Failed!</Alert>
+}
   return (
     <Form
       noValidate
@@ -83,8 +84,10 @@ function FormExample(props) {
       action="/register"
       method="post"
     >
+      {errorMsg()}
       <Form.Row>
         <Form.Group as={Col} md="6" controlId="validationCustom01">
+        
           <Form.Label>Full name</Form.Label>
           <Form.Control
             required
@@ -162,6 +165,7 @@ function FormExample(props) {
           </Form.Control.Feedback>
         </Form.Group>
       </Form.Row>
+      
       <Button type="submit" onClick={handleSubmit}>
         Register
       </Button>

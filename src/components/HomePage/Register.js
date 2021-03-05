@@ -17,7 +17,7 @@ function Register() {
           <Modal.Title>Register Yourself</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <RegisterForm />
+          <RegisterForm close ={handleClose}/>
         </Modal.Body>
         <Modal.Footer>
           Already Registered?
