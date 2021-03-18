@@ -69,7 +69,7 @@ function FormExample(props) {
 
   const redirectToHome = () => {
     props.close()
-    return <Redirect to='/home' />
+    return <Redirect to='/' />
 }
 const errorMsg = ()=>{
   if (state.Success)
