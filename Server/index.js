@@ -17,7 +17,7 @@ app.use(cors());
 app.use(passport.initialize());
 
 app.use("/api/user", userRouter)
-app.use("/api/blog",auth.verifyUser, blogRouter);
+app.use("/api/blog", blogRouter);
 
 app.listen(5000, () => console.log("server running "));
 

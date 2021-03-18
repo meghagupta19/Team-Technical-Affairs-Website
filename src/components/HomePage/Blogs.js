@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import React, { useState ,useEffect} from "react";
+import { Navbar, Nav, NavDropdown ,ListGroup,ListGroupItem} from "react-bootstrap";
 import Login from "./login";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
@@ -10,12 +10,22 @@ function Blogs() {
   
   const [state, setState] = useState({
     "username": "",
-    "exp":""
+    "exp":"",
+    "blogs":[]
   })
+  useEffect(()=>{
+    axios.get(API_URL+ "blog")
+    .then((data)=>{
+      data = data.data
+      blogs= data.blogs
+      setState({"blogs":[...state.blogs, ...blogs]})
+    })
+  },[])
+
   function handleOnChange(e){
     const {name,value} = e.target
     setState({...state, [name]:value})
-    
+  
   }
   function handleOnSubmit(e){
     e.preventDefault();
@@ -23,18 +33,29 @@ function Blogs() {
       "username": state.username,
       "exp": state.exp
     }
-    const access_token = localStorage.getItem("jwt")
-   
-   axios.post(API_URL+"blog",data,{ headers: {"Authorization" : "Bearer "+ access_token}}).then((res)=>{
-      console.log("response recorded");
+    
+   axios.post(API_URL+"blog",data).then((res)=>{
+      
     }).catch((err)=>{
       console.log(data)
       console.log(err)
     })
     setState({
       "username": "",
-    "exp":""
+    "exp":"",
+     "blogs":[...state.blogs, data]
     })
+    
+  }
+  function blogs(){
+    return (state.blogs.map((blog)=>{
+      return (<ListGroupItem>
+        <h4>{blog.username}</h4>
+        <p>{blog.exp}</p>
+      </ListGroupItem>
+      )
+    })
+    )
   }
   return (
     <div className="body2">
@@ -109,8 +130,12 @@ function Blogs() {
           <textarea name="exp" rows="5" columns="15"  onChange={handleOnChange} value={state.exp} ></textarea>
           <button type="submit" onClick={handleOnSubmit}>Add</button>
         </form>
+        <ListGroup>
+          {blogs()}
+        </ListGroup>
       </div>
       <div className="bottom">
+
         <Contact />
       </div>
     </div>
