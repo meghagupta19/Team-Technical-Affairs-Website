@@ -74,7 +74,7 @@ function Blogs() {
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="ml-auto nav-item">
               <Nav.Link>
-                <Link to="/home" className="placed-blog">
+                <Link to="/" className="placed-blog">
                   Home
                 </Link>
               </Nav.Link>
