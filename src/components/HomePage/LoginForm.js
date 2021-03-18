@@ -47,7 +47,7 @@ function LoginForm(props) {
   const performRedirect = () => {
     if (loginData.didRedirect || isAuthenticated()) {
       props.close()
-      return <Redirect to='/home' />
+      return <Redirect to='/' />
     }
   }
   return (
