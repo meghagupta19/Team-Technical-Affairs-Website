@@ -177,8 +177,18 @@ app.post("/blog",function(req,res){
     res.redirect("/blog");
 })
 
+app.post("/delete",function(req,res){
 
-
+    Blog.deleteOne({username: req.body.deletedBlog},function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+            console.log("Deleted checked item");
+            res.redirect("/blog");
+        }
+    })
+})
 
 
 // app.post("/register",function(req,res){

@@ -1,12 +1,12 @@
 import React from "react";
 import Carousel from "react-bootstrap/Carousel";
-import Button from 'react-bootstrap/Button'
+import Button from "react-bootstrap/Button";
 import "./Events.css";
 function Events() {
   return (
     <div>
       <Carousel className="Events-content" pause="false">
-        <Carousel.Item className="Events-item" interval={1000}>
+        <Carousel.Item className="Events-item" interval={3000}>
           <img
             className="d-block w-100"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbEGQ9o9-hBjxoJml7L4nDEXgrXG_rAipqA&usqp=CAU"
@@ -29,12 +29,12 @@ function Events() {
               comprehensible Latin anymore. While lorem ipsum's still resembles
               classical Latin, it actually has no meaning whatsoever.
             </p>
-            <Button variant="info" href="#"size="lg" active>
+            <Button variant="info" href="#" size="lg" active>
               Website
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className="Events-item"interval={500}>
+        <Carousel.Item className="Events-item" interval={3000}>
           <img
             className="d-block w-100"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbEGQ9o9-hBjxoJml7L4nDEXgrXG_rAipqA&usqp=CAU"
@@ -63,7 +63,7 @@ function Events() {
             </Button>
           </Carousel.Caption>
         </Carousel.Item>
-        <Carousel.Item className="Events-item" interval={500}>
+        <Carousel.Item className="Events-item" interval={3000}>
           <img
             className="d-block w-100"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbEGQ9o9-hBjxoJml7L4nDEXgrXG_rAipqA&usqp=CAU"
