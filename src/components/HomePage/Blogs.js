@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from "react";
-import { Navbar, Nav, NavDropdown ,ListGroup,ListGroupItem} from "react-bootstrap";
+import { Navbar, Nav, NavDropdown ,ListGroup,ListGroupItem, Container,Row,Col} from "react-bootstrap";
 import Login from "./login";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
@@ -72,7 +72,7 @@ function Blogs() {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="ml-auto nav-item">
+            <Nav className="ml-auto nav-item nav-blog">
               <Nav.Link>
                 <Link to="/" className="placed-blog">
                   Home
@@ -125,14 +125,24 @@ function Blogs() {
         </Navbar>
       </div>
       <div className="placements">
-        <form >
-          <input type="email" name="username" onChange={handleOnChange} value={state.username}/>
-          <textarea name="exp" rows="5" columns="15"  onChange={handleOnChange} value={state.exp} ></textarea>
-          <button type="submit" onClick={handleOnSubmit}>Add</button>
-        </form>
-        <ListGroup>
+      <Container>
+        <Row>
+          <Col md={8}>
+          <ListGroup className="blog-list">
           {blogs()}
         </ListGroup>
+        </Col>
+        <Col md={4}>
+        <form className="blog-form">
+          <h3>Add Your Reviews</h3>
+          <input className="user" placeholder="Username" type="email" name="username" onChange={handleOnChange} value={state.username}/>
+          <textarea className="message" placeholder="Type a message here" name="exp" rows="5" columns="15"  onChange={handleOnChange} value={state.exp} ></textarea>
+          <button className="blog-button" type="submit" onClick={handleOnSubmit}>Add</button>
+        </form></Col>
+        </Row>
+      </Container>
+        
+        
       </div>
       <div className="bottom">
 
