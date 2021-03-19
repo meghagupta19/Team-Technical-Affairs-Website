@@ -18,7 +18,7 @@
 }
 
 .navbar {
-  padding: 0px 20px 0px 0px;
+  padding: 0px 170px 0px 0px;
 }
 
 .navbar-brand {
@@ -35,8 +35,7 @@
 
 .nav-link > a,
 .nav-link,
-.placed-blog,
-.dropdown-toggle {
+.placed-blog, #basic-nav-dropdown {
   font-size: 19px;
   padding: 0;
   margin: 0;
@@ -55,6 +54,14 @@ body {
   overflow-x: hidden;
 }
 
+a>.admin-heading{
+  color: rgb(167, 164, 164);
+}
+
+a>.admin-heading:hover{
+  color: rgb(137, 137, 139);
+}
+
 .dropdown-item {
   color: white;
   font-size: 16px;
@@ -71,9 +78,13 @@ body {
   background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
 }
 
-@media (max-width: 576px) {
+@media (max-width: 732px) {
   .navbar-brand {
     width: 400px;
+    margin-left: -40px;
+  }
+  .navbar {
+    padding: 0px 20px 0px 0px;
   }
 }
 .news-col {
@@ -133,10 +144,19 @@ body {
 
 .image-shape {
   border-radius: 50%;
+  height: 250px;
 }
 
+.image-shape2{
+  border-radius: 50%;
+  height: 250px;
+}
+.image-shape3{
+  border-radius: 50%;
+  height: 250px;
+}
 .bottom {
-  margin-top: 200px;
+  margin-top: 100px;
   background: #232526;
   background: -webkit-linear-gradient(to right, #414345, #232526);
   background: linear-gradient(to right, #414345, #232526);
