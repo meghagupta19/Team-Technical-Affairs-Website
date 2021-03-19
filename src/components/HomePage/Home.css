@@ -213,3 +213,62 @@ a:hover {
 .tech-team > h1 {
   margin: auto;
 }
+
+
+.blog-form{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  margin-left: 30px;
+  margin-top: 20px;
+}
+
+.blog-list{
+  margin-top: 40px;
+}
+
+.nav-blog>.nav-link{
+  margin: 0px 20px;
+}
+
+.list-group-item{
+  margin: 20px;
+  max-height: 500px;
+  max-width: 700px;
+  border-radius: 10px;
+  background-color: teal;
+  color: white;
+}
+
+.placements{
+  display: flex;
+  flex-direction: row;
+}
+
+.blog-button{
+  padding: 5px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 20%;
+  width: 100px;
+  margin: 10px;
+}
+
+.message{
+  background-color: teal;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+}
+.message::placeholder,.user::placeholder{
+  color: white;
+}
+.user{
+  margin: 10px 0px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: teal;
+  color: white;
+}
