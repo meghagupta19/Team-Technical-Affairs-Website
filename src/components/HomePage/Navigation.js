@@ -40,7 +40,7 @@ function Navigation() {
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-auto nav-item">
             <Nav.Link>
-              <a
+              <a className="admin-heading"
                 href="/"
                 onClick={(e) => {
                   let hero = document.getElementById("administration");
