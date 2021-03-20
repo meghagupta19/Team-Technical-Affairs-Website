@@ -1,5 +1,5 @@
 import React, { useState ,useEffect} from "react";
-import { Navbar, Nav, NavDropdown ,ListGroup,ListGroupItem, Container,Row,Col} from "react-bootstrap";
+import { Navbar, Nav, NavDropdown ,ListGroup,ListGroupItem,Card, Container,Row,Col} from "react-bootstrap";
 import Login from "./login";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
@@ -49,10 +49,15 @@ function Blogs() {
   }
   function blogs(){
     return (state.blogs.map((blog)=>{
-      return (<ListGroupItem>
-        <h4>{blog.username}</h4>
-        <p>{blog.exp}</p>
-      </ListGroupItem>
+      return (<Col md={6} className="blog-col">
+      <Card>
+      <Card.Header>{blog.username}</Card.Header>
+      <Card.Body>
+        <Card.Text>
+        {blog.exp}
+        </Card.Text>
+      </Card.Body>
+    </Card></Col>
       )
     })
     )
@@ -128,9 +133,11 @@ function Blogs() {
       <Container>
         <Row>
           <Col md={8}>
-          <ListGroup className="blog-list">
-          {blogs()}
-        </ListGroup>
+            
+          <Container className="blog-list">
+            <Row className="blog-row">
+          {blogs()}</Row>
+        </Container>
         </Col>
         <Col md={4}>
         <form className="blog-form">
