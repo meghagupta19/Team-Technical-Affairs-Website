@@ -226,8 +226,17 @@ a:hover {
 
 .blog-list{
   margin-top: 40px;
+  
+}
+.blog-col{
+  margin-bottom: 40px;
+  
 }
 
+.blog-col>.card>.card-body{
+  background-color: teal;
+  color: white;
+}
 .nav-blog>.nav-link{
   margin: 0px 20px;
 }
