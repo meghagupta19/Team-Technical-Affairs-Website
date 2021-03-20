@@ -35,7 +35,9 @@
 
 .nav-link > a,
 .nav-link,
-.placed-blog, #basic-nav-dropdown {
+.placed-blog,
+#basic-nav-dropdown,
+.nav-link > div {
   font-size: 19px;
   padding: 0;
   margin: 0;
@@ -43,7 +45,9 @@
   color: #414345;
 }
 .placed-blog:hover,
-.nav-link > a:hover {
+.nav-link > a:hover,
+#basic-nav-dropdown:hover,
+.nav-link > div:hover {
   color: black;
   text-decoration: none;
 }
@@ -54,11 +58,11 @@ body {
   overflow-x: hidden;
 }
 
-a>.admin-heading{
+a > .admin-heading {
   color: rgb(167, 164, 164);
 }
 
-a>.admin-heading:hover{
+a > .admin-heading:hover {
   color: rgb(137, 137, 139);
 }
 
@@ -147,11 +151,11 @@ a>.admin-heading:hover{
   height: 250px;
 }
 
-.image-shape2{
+.image-shape2 {
   border-radius: 50%;
   height: 250px;
 }
-.image-shape3{
+.image-shape3 {
   border-radius: 50%;
   height: 250px;
 }
@@ -214,8 +218,7 @@ a:hover {
   margin: auto;
 }
 
-
-.blog-form{
+.blog-form {
   display: flex;
   flex-direction: column;
   width: 300px;
@@ -224,24 +227,22 @@ a:hover {
   margin-top: 20px;
 }
 
-.blog-list{
+.blog-list {
   margin-top: 40px;
-  
 }
-.blog-col{
+.blog-col {
   margin-bottom: 40px;
-  
 }
 
-.blog-col>.card>.card-body{
+.blog-col > .card > .card-body {
   background-color: teal;
   color: white;
 }
-.nav-blog>.nav-link{
+.nav-blog > .nav-link {
   margin: 0px 20px;
 }
 
-.list-group-item{
+.list-group-item {
   margin: 20px;
   max-height: 500px;
   max-width: 700px;
@@ -250,34 +251,42 @@ a:hover {
   color: white;
 }
 
-.placements{
+.placements {
   display: flex;
   flex-direction: row;
 }
 
-.blog-button{
+.blog-button {
   padding: 5px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 600;
   font-size: 20px;
-  border-radius: 20%;
+  border-radius: 20px;
   width: 100px;
   margin: 10px;
 }
 
-.message{
+.message {
   background-color: teal;
   padding: 10px;
   border-radius: 10px;
   color: white;
+  margin-top: 10px;
 }
-.message::placeholder,.user::placeholder{
+.message::placeholder,
+.user::placeholder,
+.blog-name::placeholder {
   color: white;
 }
-.user{
+.user,
+.blog-name {
   margin: 10px 0px;
   padding: 10px;
   border-radius: 10px;
   background-color: teal;
+  color: white;
+}
+
+.blog-form > h3 {
   color: white;
 }
