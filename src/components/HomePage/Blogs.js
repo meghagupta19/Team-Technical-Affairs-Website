@@ -4,12 +4,14 @@ import {
   Nav,
   NavDropdown,
   ListGroup,
+  NavItem,
   ListGroupItem,
   Card,
   Container,
   Row,
   Col,
 } from "react-bootstrap";
+import { isAuthenticated, signout } from "../../auth/authHelper";
 import Login from "./login";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
@@ -17,6 +19,7 @@ import axios from "axios";
 import { API_URL } from "../../config";
 
 function Blogs() {
+  const [setLogin] = useState(false);
   const [state, setState] = useState({
     name: "",
     username: "",
@@ -62,17 +65,38 @@ function Blogs() {
       return (
         <Col md={12} className="blog-col">
           <Card>
-            <Card.Header>{blog.username}</Card.Header>
-
             <Card.Body>
               <Card.Title>{blog.name}</Card.Title>
               <Card.Text>{blog.exp}</Card.Text>
             </Card.Body>
           </Card>
+          <hr></hr>
         </Col>
       );
     });
   }
+  const loginDetails = () => {
+    if (isAuthenticated()) {
+      return (
+        <div>
+          <NavItem>Welcome {localStorage.getItem("name")}!</NavItem>
+          <Nav.Link
+            onClick={() => {
+              signout();
+              setLogin(true);
+            }}
+          >
+            Logout
+          </Nav.Link>
+        </div>
+      );
+    } else
+      return (
+        <Nav.Link>
+          <Login />
+        </Nav.Link>
+      );
+  };
   return (
     <div className="body2">
       <div className="top2">
@@ -133,9 +157,7 @@ function Blogs() {
                   Contact
                 </a>
               </Nav.Link>
-              <Nav.Link>
-                <Login />
-              </Nav.Link>
+              <Nav.Link>{loginDetails()}</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
