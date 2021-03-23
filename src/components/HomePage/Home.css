@@ -10,7 +10,18 @@
 }
 
 .body2 {
-  background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
+  background: #134e5e; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #71b280,
+    #134e5e
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #71b280,
+    #134e5e
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -230,25 +241,24 @@ a:hover {
 .blog-list {
   margin-top: 40px;
 }
-.blog-col {
-  margin-bottom: 40px;
-}
 
-.blog-col > .card > .card-body {
-  background-color: teal;
+.blog-col > hr {
+  background-color: rgb(39, 38, 38);
+}
+.blog-col > p {
   color: white;
+}
+.blog-col > .card > .card-body {
+  background: #134e5e;
+  background: -webkit-linear-gradient(to right, #71b280, #134e5e);
+  background: linear-gradient(to right, #71b280, #134e5e);
+  padding: 0;
+}
+.blog-col > .card {
+  border: none;
 }
 .nav-blog > .nav-link {
   margin: 0px 20px;
-}
-
-.list-group-item {
-  margin: 20px;
-  max-height: 500px;
-  max-width: 700px;
-  border-radius: 10px;
-  background-color: teal;
-  color: white;
 }
 
 .placements {
