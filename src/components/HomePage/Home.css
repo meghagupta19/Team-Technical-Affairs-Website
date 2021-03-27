@@ -10,22 +10,10 @@
 }
 
 .body2 {
-  background: #134e5e; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #71b280,
-    #134e5e
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(
-    to right,
-    #71b280,
-    #134e5e
-  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background-repeat: no-repeat;
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
   background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  padding-left: 0;
 }
 
 .navbar {
@@ -231,11 +219,18 @@ a:hover {
 
 .blog-form {
   display: flex;
-  flex-direction: column;
-  width: 300px;
+  flex-direction: row;
   padding: 20px;
-  margin-left: 30px;
   margin-top: 20px;
+}
+
+.blog-form-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-send{
+  align-items: center;
 }
 
 .blog-list {
@@ -248,24 +243,27 @@ a:hover {
 .blog-col > p {
   color: white;
 }
-.blog-col > .card > .card-body {
-  background: #134e5e;
-  background: -webkit-linear-gradient(to right, #71b280, #134e5e);
-  background: linear-gradient(to right, #71b280, #134e5e);
-  padding: 0;
+.blog-col > .card,.blog-col2 > .card  {
+  padding: 10px 10px 0px 10px;
+  background-image: url("data:image/jpeg;base64,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");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  margin-bottom: 20px;
+  box-shadow: 5px 5px 5px 5px rgb(57, 105, 105);
 }
-.blog-col > .card {
-  border: none;
-}
+
 .nav-blog > .nav-link {
   margin: 0px 20px;
 }
-
-.placements {
-  display: flex;
-  flex-direction: row;
+.navbar-blog{
+  background-color: white;
 }
 
+.blog-button-div{
+  display: flex;
+}
 .blog-button {
   padding: 5px;
   font-family: "Courier New", Courier, monospace;
@@ -274,14 +272,27 @@ a:hover {
   border-radius: 20px;
   width: 100px;
   margin: 10px;
+  background-color:#EFEFEF;
+  color: black;
+  border: none;
+}
+.blog-button:hover{
+  font-size: larger;
+  color: black;
+  background-color: #EFEFEF;
 }
 
-.message {
+.message,.title-blog {
   background-color: teal;
   padding: 10px;
   border-radius: 10px;
   color: white;
   margin-top: 10px;
+}
+label{
+  color: white;
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 .message::placeholder,
 .user::placeholder,
@@ -297,6 +308,61 @@ a:hover {
   color: white;
 }
 
-.blog-form > h3 {
-  color: white;
+.blog-form-head {
+  color: rgb(198, 227, 230);
+  margin-top: 10px;
+  text-align: center;
+}
+
+.read-more{
+  color: blue;
+}
+
+
+.modal-header{
+  border-bottom: none;
+}
+
+.blog-col2> .card{
+  padding:0px 10px;
+  color:black;
+}
+
+.modal-body{
+  padding-top: 0px;
+}
+
+.modal-blog>.modal-dialog>.modal-content{
+  background-image: url("https://c4.wallpaperflare.com/wallpaper/743/421/76/geometry-abstract-lines-digital-art-wallpaper-preview.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 0;
+}
+.modal-blog>.modal-dialog>.modal-content>.modal-header>.close>span{
+  font-size: 50px;
+  font-weight: 900;  
+}
+
+.bootstrap-tagsinput {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  display: block;
+  padding: 4px 6px;
+  color: #555;
+  border-radius: 4px;
+  max-width: 100%;
+  line-height: 22px;
+  cursor: text;
+}
+.bootstrap-tagsinput input {
+  border: none;
+  box-shadow: none;
+  outline: none;
+  background-color: transparent;
+  padding: 0 6px;
+  margin: 0;
+  width: auto;
+  max-width: inherit;
 }
