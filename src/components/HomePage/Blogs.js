@@ -31,7 +31,6 @@ function Blogs() {
     username: "",
     title: "",
     exp: "",
-    tags: "",
     state:"",
     blogs: [],
   });
@@ -54,7 +53,6 @@ function Blogs() {
       username: state.username,
       title: state.title,
       exp: state.exp,
-      tags: state.tags,
     };
 
     axios
@@ -69,7 +67,6 @@ function Blogs() {
       username: "",
       title: "",
       exp: "",
-      tags: "",
       blogs: [...state.blogs, data],
     });
   }
@@ -306,9 +303,6 @@ function Blogs() {
                     onChange={handleOnChange}
                     value={state.username}
                   />
-                  <input className="tags" name="tags" type="text" value="" data-role="tagsinput" id="tags" class="form-control"
-                  onChange={handleOnChange}
-                  value={state.tags}/>
                   
                   </Col>
                   
