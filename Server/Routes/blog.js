@@ -8,7 +8,9 @@ blogRouter.route("/").post(function(req,res){
     
     const newBlog = new Blog ({
         username :req.body.username,
-        exp : req.body.exp
+        exp : req.body.exp,
+        name: req.body.name,
+        title: req.body.title
     })
 
     newBlog.save().then(res.json(
