@@ -31,6 +31,7 @@ function Blogs() {
     username: "",
     title: "",
     exp: "",
+    tags: "",
     state:"",
     blogs: [],
   });
@@ -68,7 +69,7 @@ function Blogs() {
       username: "",
       title: "",
       exp: "",
-      tags:"",
+      tags: "",
       blogs: [...state.blogs, data],
     });
   }
@@ -83,12 +84,6 @@ function Blogs() {
               <h5>{blog.title}</h5>
               <Card.Text>{blog.exp}</Card.Text>
             </Card.Body>
-              <div className="blog-button-div">
-            <Button className="blog-button">Edit</Button>
-            <button className="blog-button" type="submit">
-              Send
-            </button>
-            </div>
           </Card>
         </Col>
       );
@@ -267,7 +262,7 @@ function Blogs() {
           <Container>
             <Row className="form-send">
               <Col>
-                <form className="blog-form">
+                <form className="blog-form" action="mailto:meghagupta190801@gmail.com" method="post" enctype="text/plain">
                 <Col md={6} className="blog-form-col">
                   <label>Title</label>
                   <input
@@ -314,7 +309,12 @@ function Blogs() {
                   <input className="tags" name="tags" type="text" value="" data-role="tagsinput" id="tags" class="form-control"
                   onChange={handleOnChange}
                   value={state.tags}/>
-                  <div className="blog-button-div">
+                  
+                  </Col>
+                  
+                  
+                </form>
+                <div className="blog-button-div">
                     <button
                       className="blog-button"
                       type="submit"
@@ -346,9 +346,6 @@ function Blogs() {
                     </Modal>
                   </div>
               
-                  </Col>
-                  
-                </form>
               </Col>
               
               
