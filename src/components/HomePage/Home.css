@@ -312,12 +312,20 @@ label{
   color: rgb(198, 227, 230);
   margin-top: 10px;
   text-align: center;
+  font-size: larger;
+  font-weight: 700;
 }
-
+.blog-form-head1{
+  color: rgb(198, 227, 230);
+  text-decoration: underline;
+  margin-top: 10px;
+  text-align: center;
+  font-size: larger;
+  font-weight: 700;
+}
 .read-more{
   color: blue;
 }
-
 
 .modal-header{
   border-bottom: none;
