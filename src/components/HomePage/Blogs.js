@@ -9,14 +9,14 @@ import {
   Row,
   Col,
 } from "react-bootstrap";
-import { Modal, Button, Collapse } from "react-bootstrap";
+import { Modal,Collapse } from "react-bootstrap";
 import { isAuthenticated, signout } from "../../auth/authHelper";
 import Login from "./login";
 import { Link } from "react-router-dom";
 import Contact from "./Contact";
 import axios from "axios";
 import { API_URL } from "../../config";
-import { CardHeader } from "@material-ui/core";
+//import { CardHeader } from "@material-ui/core";
 
 function Blogs() {
   const [setLogin] = useState(false);
@@ -24,8 +24,6 @@ function Blogs() {
   const [open, setOpen] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const [readMore,setReadMore]=useState(false);
-  const linkName=readMore?'Read Less << ':'Read More >> '
   const [state, setState] = useState({
     name: "",
     username: "",
@@ -244,14 +242,14 @@ function Blogs() {
             </Col>
           </Row>
         </Container>
-        <h3
-          className="blog-form-head"
+        <div
+          className="blog-form-head1"
           onClick={() => setOpen(!open)}
           aria-controls="example-collapse-text"
           aria-expanded={open}
         >
           Write Your Experience
-        </h3>
+        </div>
         <h5 className="blog-form-head">
         Your small contributions can make someone learn easier and better
         </h5>
