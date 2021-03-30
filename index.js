@@ -48,7 +48,9 @@ const userSchema = new mongoose.Schema({
 var blogs = [];
 const blogSchema = new mongoose.Schema({
     username: String,
-    exp : String
+    exp : String,
+    name:String,
+    title:String
 })
 
 //Plugging in passport local mongoose
